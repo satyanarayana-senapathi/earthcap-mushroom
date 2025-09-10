@@ -46,7 +46,7 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-accent" />
-                <span className="text-sm">katravulaplli,andhrapradesh-533437</span>
+                <span className="text-sm">Katravulaplli,Peddapuram,Andhra Pradesh-533437</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-accent" />
