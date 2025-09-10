@@ -1,18 +1,10 @@
-# Welcome to your Lovable project
+# Welcome to EarthCap
 
 ## Project info
-
-**URL**: https://lovable.dev/projects/55d7ce11-8b7d-4987-b4ed-ef91047ce0ce
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/55d7ce11-8b7d-4987-b4ed-ef91047ce0ce) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
