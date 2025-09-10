@@ -10,7 +10,7 @@ const About = () => {
         <title>About EarthCap - Our Story of Growing Premium Organic Mushrooms</title>
         <meta name="description" content="Learn about EarthCap's journey in growing premium Milky Mushrooms and Button Mushrooms using sustainable, organic farming practices. Our commitment to quality and nature." />
         <meta name="keywords" content="EarthCap story, organic mushroom farming, sustainable agriculture, Milky Mushrooms, Button Mushrooms, farm to table" />
-        <link rel="canonical" href="https://earthcap.com/about" />
+        <link rel="canonical" href="https://earthcap.in/about" />
       </Helmet>
 
       <div className="min-h-screen relative">
@@ -59,6 +59,7 @@ const About = () => {
                       src="/lovable-uploads/c30b18c4-72ef-4dd7-b2f8-d3779dfda6b7.png" 
                       alt="EarthCap organic mushroom farming - sustainable agriculture practices"
                       className="w-full h-64 object-contain rounded-lg"
+                      loading="lazy"
                     />
                   </div>
                 </div>

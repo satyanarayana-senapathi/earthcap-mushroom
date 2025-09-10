@@ -10,8 +10,8 @@ const ProductsSection = () => {
       name: "Fresh Milky Mushrooms",
       emoji: "🍄",
       description: "Premium white milky mushrooms with delicate flavor and meaty texture. Perfect for curries, stir-fries, and gourmet dishes.",
-      price: "₹180",
-      unit: "per 250g",
+      price: "₹60",
+      unit: "per 200g",
       features: ["Organic", "Fresh Daily", "No Chemicals"],
       rating: 4.9,
       image: "milky-mushroom"
@@ -21,13 +21,18 @@ const ProductsSection = () => {
       name: "Button Mushrooms",
       emoji: "🍄",
       description: "Classic button mushrooms with firm texture and earthy flavor. Versatile ingredient for all your culinary needs.",
-      price: "₹120",
-      unit: "per 250g",
+      price: "₹50",
+      unit: "per 200g",
       features: ["Farm Fresh", "Premium Quality", "Natural"],
       rating: 4.8,
       image: "button-mushroom"
     }
   ];
+
+  const imageMap: Record<string, string> = {
+    "milky-mushroom": "/lovable-uploads/milky.jpg",
+    "button-mushroom": "/lovable-uploads/button.jpg",
+  };
 
   return (
     <section id="products" className="py-20 bg-background">
@@ -55,9 +60,12 @@ const ProductsSection = () => {
             >
               {/* Product Image */}
               <div className="h-64 bg-gradient-card flex items-center justify-center relative overflow-hidden">
-                <div className="text-8xl group-hover:scale-110 transition-spring float">
-                  {product.emoji}
-                </div>
+                <img
+                  src={imageMap[product.image]}
+                  alt={`${product.name} - EarthCap`}
+                  className="h-52 w-auto object-contain group-hover:scale-105 transition-spring"
+                  loading="lazy"
+                />
                 <div className="absolute top-4 right-4">
                   <Button variant="ghost" size="icon" className="rounded-full bg-background/50 backdrop-blur-sm">
                     <Heart className="h-4 w-4" />
@@ -107,9 +115,11 @@ const ProductsSection = () => {
                     </div>
                   </div>
                   <div className="flex gap-3">
-                    <Button variant="primary" className="flex-1">
-                      <ShoppingCart className="h-4 w-4 mr-2" />
-                      Add to Cart
+                    <Button variant="primary" className="flex-1" asChild>
+                      <Link to={product.id === 1 ? "/checkout?product=milky" : "/checkout?product=button"}>
+                        <ShoppingCart className="h-4 w-4 mr-2" />
+                        Add to Cart
+                      </Link>
                     </Button>
                     <Button variant="outline" className="flex-1" asChild>
                       <Link to={product.id === 1 ? "/products/milky-mushroom" : "/products/button-mushroom"}>

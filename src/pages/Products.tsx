@@ -13,7 +13,7 @@ const Products = () => {
         <title>Premium Organic Mushrooms - Milky & Button Mushrooms | EarthCap</title>
         <meta name="description" content="Shop EarthCap's premium organic Milky Mushrooms and Button Mushrooms. Fresh, nutritious, and sustainably grown. Free delivery on orders over $25." />
         <meta name="keywords" content="buy mushrooms online, Milky Mushrooms, Button Mushrooms, organic mushrooms, fresh mushrooms, EarthCap products" />
-        <link rel="canonical" href="https://earthcap.com/products" />
+        <link rel="canonical" href="https://earthcap.in/products" />
       </Helmet>
 
       <div className="min-h-screen relative">
@@ -42,7 +42,12 @@ const Products = () => {
                 <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-primary/10">
                   <div className="p-8">
                     <div className="text-center mb-6">
-                      <div className="text-6xl mb-4">🍄</div>
+                      <img
+                        src="/lovable-uploads/milky.jpg"
+                        alt="Fresh Milky Mushrooms - EarthCap"
+                        className="mx-auto h-32 w-auto object-contain mb-4"
+                        loading="lazy"
+                      />
                       <h2 className="text-3xl font-bold text-primary mb-2">Milky Mushrooms</h2>
                       <div className="flex items-center justify-center gap-1 mb-2">
                         {[...Array(5)].map((_, i) => (
@@ -73,7 +78,7 @@ const Products = () => {
                     </div>
                     
                     <div className="text-center mb-6">
-                      <div className="text-3xl font-bold text-primary mb-2">₹180/kg</div>
+                      <div className="text-3xl font-bold text-primary mb-2">₹300/kg</div>
                       <p className="text-sm text-muted-foreground">Free delivery on orders over ₹500</p>
                     </div>
                     
@@ -83,9 +88,11 @@ const Products = () => {
                           View Details
                         </Link>
                       </Button>
-                      <Button variant="outline" className="flex-1">
-                        <ShoppingCart className="w-4 h-4 mr-2" />
-                        Add to Cart
+                      <Button variant="outline" className="flex-1" asChild>
+                        <Link to="/checkout?product=milky">
+                          <ShoppingCart className="w-4 h-4 mr-2" />
+                          Add to Cart
+                        </Link>
                       </Button>
                     </div>
                   </div>
@@ -95,7 +102,12 @@ const Products = () => {
                 <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-primary/10">
                   <div className="p-8">
                     <div className="text-center mb-6">
-                      <div className="text-6xl mb-4">🍄</div>
+                      <img
+                        src="/lovable-uploads/button.jpg"
+                        alt="Fresh Button Mushrooms - EarthCap"
+                        className="mx-auto h-32 w-auto object-contain mb-4"
+                        loading="lazy"
+                      />
                       <h2 className="text-3xl font-bold text-primary mb-2">Button Mushrooms</h2>
                       <div className="flex items-center justify-center gap-1 mb-2">
                         {[...Array(5)].map((_, i) => (
@@ -126,7 +138,7 @@ const Products = () => {
                     </div>
                     
                     <div className="text-center mb-6">
-                      <div className="text-3xl font-bold text-primary mb-2">₹150/kg</div>
+                      <div className="text-3xl font-bold text-primary mb-2">₹250/kg</div>
                       <p className="text-sm text-muted-foreground">Free delivery on orders over ₹500</p>
                     </div>
                     
@@ -136,9 +148,11 @@ const Products = () => {
                           View Details
                         </Link>
                       </Button>
-                      <Button variant="outline" className="flex-1">
-                        <ShoppingCart className="w-4 h-4 mr-2" />
-                        Add to Cart
+                      <Button variant="outline" className="flex-1" asChild>
+                        <Link to="/checkout?product=button">
+                          <ShoppingCart className="w-4 h-4 mr-2" />
+                          Add to Cart
+                        </Link>
                       </Button>
                     </div>
                   </div>

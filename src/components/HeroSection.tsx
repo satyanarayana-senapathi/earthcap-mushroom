@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Leaf, Heart } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
@@ -24,25 +26,23 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center space-x-2 bg-accent/20 backdrop-blur-sm rounded-full px-6 py-2 mb-8">
-            <span className="text-2xl">🍄</span>
-            <span className="text-sm font-medium text-forest-dark">
+          <div className="inline-flex items-center space-x-2 bg-accent/30 ring-1 ring-accent/60 backdrop-blur-sm rounded-full px-6 py-2 mb-8">
+            <span className="text-2xl" aria-hidden="true">🍄</span>
+            <span className="text-base md:text-lg font-semibold text-forest-dark">
               Farm Fresh • 100% Natural • Premium Quality
             </span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary-foreground mb-6 leading-tight">
             EarthCap – Fresh Milky & Button{" "}
             <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
               Mushrooms
             </span>
-            <br />
-            Delivered with Care
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-2xl text-primary-foreground/90 mb-10 max-w-2xl mx-auto leading-relaxed">
             Premium organic Milky Mushrooms and Button Mushrooms grown naturally without chemicals. 
             Farm-to-table freshness with sustainable farming practices delivered to your doorstep.
           </p>
@@ -52,7 +52,8 @@ const HeroSection = () => {
             <Button
               variant="hero"
               size="lg"
-              className="group px-8 py-4"
+              className="group px-8 py-4 text-black hover:text-black"
+              onClick={() => navigate('/products')}
             >
               Shop Fresh Mushrooms
               <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth" />
@@ -60,7 +61,8 @@ const HeroSection = () => {
             <Button
               variant="outline"
               size="lg"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 px-8 py-4 rounded-xl"
+              className="border-black text-black hover:bg-black/10 px-8 py-4 rounded-xl"
+              onClick={() => navigate('/farming-process')}
             >
               Learn Our Process
             </Button>

@@ -4,7 +4,7 @@ import { Star, Quote } from "lucide-react";
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Priya Sharma",
+      name: "Priya",
       role: "Home Chef",
       rating: 5,
       text: "EarthCap mushrooms are incredibly fresh! The milky mushrooms have such a perfect texture for my curries. My family loves them!",
@@ -18,7 +18,7 @@ const TestimonialsSection = () => {
       image: "👨‍🍳"
     },
     {
-      name: "Anita Patel",
+      name: "Anita",
       role: "Health Enthusiast",
       rating: 5,
       text: "Finally found organic mushrooms that are truly chemical-free! The button mushrooms are perfect for my healthy meal preps.",

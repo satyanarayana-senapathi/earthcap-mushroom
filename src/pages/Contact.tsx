@@ -8,9 +8,9 @@ const Contact = () => {
     <>
       <Helmet>
         <title>Contact EarthCap - Get Fresh Organic Mushrooms Delivered | Phone & WhatsApp</title>
-        <meta name="description" content="Contact EarthCap for fresh organic Milky and Button Mushrooms. Call +91-9876543210, WhatsApp orders, or visit our farm. Fast delivery available." />
+        <meta name="description" content="Contact EarthCap for fresh organic Milky and Button Mushrooms. Call +91-94945-25944, WhatsApp orders, or visit our farm. Fast delivery available." />
         <meta name="keywords" content="contact EarthCap, mushroom delivery, order mushrooms, EarthCap phone number, WhatsApp mushrooms, organic mushroom supplier" />
-        <link rel="canonical" href="https://earthcap.com/contact" />
+        <link rel="canonical" href="https://earthcap.in/contact" />
       </Helmet>
 
       <div className="min-h-screen relative">

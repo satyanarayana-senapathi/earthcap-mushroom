@@ -34,25 +34,25 @@ const ContactSection = () => {
     {
       icon: Phone,
       title: "Call Us",
-      value: "+91 98765 43210",
-      action: "tel:+919876543210"
+      value: "+91 94945 25944",
+      action: "tel:+919494525944"
     },
     {
       icon: MessageCircle,
       title: "WhatsApp",
       value: "Chat with us",
-      action: "https://wa.me/919876543210"
+      action: "https://wa.me/919494525944"
     },
     {
       icon: Mail,
       title: "Email",
-      value: "hello@earthcap.in",
-      action: "mailto:hello@earthcap.in"
+      value: "mushrooms@earthcap.in",
+      action: "mailto:mushrooms@earthcap.in"
     },
     {
       icon: MapPin,
       title: "Visit Farm",
-      value: "Organic Farm, Green Valley",
+      value: "Katravulaplli,Peddapuram,Andhra Pradesh-533437",
       action: "#"
     }
   ];
@@ -111,7 +111,7 @@ const ContactSection = () => {
               <Button 
                 variant="primary" 
                 className="w-full"
-                onClick={() => window.open("https://wa.me/919876543210", "_blank")}
+                onClick={() => window.open("https://wa.me/919494525944", "_blank")}
               >
                 <MessageCircle className="h-4 w-4 mr-2" />
                 WhatsApp Now
@@ -148,7 +148,7 @@ const ContactSection = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="+91 98765 43210"
+                    placeholder="Your phone number"
                     required
                     className="rounded-lg"
                   />
@@ -157,11 +157,12 @@ const ContactSection = () => {
 
               <div>
                 <label className="text-sm font-medium text-foreground mb-2 block">
-                  Email
+                  Email *
                 </label>
                 <Input
                   name="email"
                   type="email"
+                  required
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="your.email@example.com"

@@ -10,9 +10,9 @@ const ButtonMushroom = () => {
     <>
       <Helmet>
         <title>Premium Organic Button Mushrooms - Fresh & Versatile | EarthCap</title>
-        <meta name="description" content="Buy premium organic Button Mushrooms from EarthCap. Classic white mushrooms with firm texture, earthy flavor. ₹150/kg with free delivery over ₹500." />
+        <meta name="description" content="Buy premium organic Button Mushrooms from EarthCap. Classic white mushrooms with firm texture, earthy flavor. ₹250/kg with free delivery over ₹500." />
         <meta name="keywords" content="Button Mushrooms, organic Button Mushrooms, buy Button Mushrooms online, EarthCap Button Mushrooms, white mushrooms delivery" />
-        <link rel="canonical" href="https://earthcap.com/products/button-mushroom" />
+        <link rel="canonical" href="https://earthcap.in/products/button-mushroom" />
       </Helmet>
 
       <div className="min-h-screen relative">
@@ -25,11 +25,11 @@ const ButtonMushroom = () => {
               <div className="max-w-6xl mx-auto">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                   <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8 text-center">
-                    <div className="text-8xl mb-4">🍄</div>
                     <img 
-                      src="/lovable-uploads/695f036f-896b-4ec0-baf2-a73dd765ce89.png" 
+                      src="/lovable-uploads/button.jpg" 
                       alt="Fresh organic Button Mushrooms from EarthCap - classic white mushrooms"
                       className="w-full h-64 object-contain rounded-lg"
+                      loading="lazy"
                     />
                   </div>
                   
@@ -70,12 +70,14 @@ const ButtonMushroom = () => {
                     </div>
                     
                     <div className="flex gap-4 mb-6">
-                      <Button size="lg" className="flex-1">
-                        <ShoppingCart className="w-5 h-5 mr-2" />
-                        Add to Cart
+                      <Button size="lg" className="flex-1" asChild>
+                        <a href="/checkout?product=button">
+                          <ShoppingCart className="w-5 h-5 mr-2" />
+                          Add to Cart
+                        </a>
                       </Button>
-                      <Button variant="outline" size="lg">
-                        Buy Now
+                      <Button variant="outline" size="lg" asChild>
+                        <a href="/checkout?product=button">Buy Now</a>
                       </Button>
                     </div>
                     

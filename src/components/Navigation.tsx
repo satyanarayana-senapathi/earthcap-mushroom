@@ -19,13 +19,27 @@ const Navigation = () => {
     { name: "Home", href: "/", type: "link" },
     { name: "About", href: "/about", type: "link" },
     { name: "Products", href: "/products", type: "link" },
+    { name: "Gallery", href: "/gallery", type: "link" },
+    { name: "Farming", href: "/farming-process", type: "link" },
+    { name: "Blog", href: "/blog", type: "link" },
     { name: "Reviews", href: "#testimonials", type: "scroll" },
     { name: "Contact", href: "/contact", type: "link" },
   ];
 
   const scrollToSection = (href: string) => {
+    if (href.startsWith('#')) {
+      if (window.location.pathname !== '/') {
+        window.location.href = `/${href}`;
+        setIsMobileMenuOpen(false);
+        return;
+      }
+      const element = document.querySelector(href);
+      element?.scrollIntoView({ behavior: "smooth", block: "start" });
+      setIsMobileMenuOpen(false);
+      return;
+    }
     const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
+    element?.scrollIntoView({ behavior: "smooth", block: "start" });
     setIsMobileMenuOpen(false);
   };
 
@@ -43,8 +57,9 @@ const Navigation = () => {
           <div className="flex items-center space-x-3">
             <img
               src="/lovable-uploads/c30b18c4-72ef-4dd7-b2f8-d3779dfda6b7.png"
-              alt="EarthCap Mushrooms Logo"
+              alt="EarthCap Mushrooms logo - organic mushroom brand"
               className="h-12 w-12 rounded-full"
+              loading="lazy"
             />
             <div>
               <h1 className="text-xl font-bold text-white">EarthCap</h1>
@@ -76,7 +91,7 @@ const Navigation = () => {
               )
             ))}
             <Button variant="primary" size="sm" asChild>
-              <Link to="/products">Shop Now</Link>
+              <Link to="/checkout">Shop Now</Link>
             </Button>
           </div>
 

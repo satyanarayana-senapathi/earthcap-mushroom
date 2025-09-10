@@ -10,9 +10,9 @@ const MilkyMushroom = () => {
     <>
       <Helmet>
         <title>Premium Organic Milky Mushrooms - Fresh & Natural | EarthCap</title>
-        <meta name="description" content="Buy premium organic Milky Mushrooms from EarthCap. Fresh, tender texture, mild flavor. Perfect for soups, stir-fries. ₹180/kg with free delivery over ₹500." />
+        <meta name="description" content="Buy premium organic Milky Mushrooms from EarthCap. Fresh, tender texture, mild flavor. Perfect for soups, stir-fries. ₹300/kg with free delivery over ₹500." />
         <meta name="keywords" content="Milky Mushrooms, organic Milky Mushrooms, buy Milky Mushrooms online, EarthCap Milky Mushrooms, fresh mushrooms delivery" />
-        <link rel="canonical" href="https://earthcap.com/products/milky-mushroom" />
+        <link rel="canonical" href="https://earthcap.in/products/milky-mushroom" />
       </Helmet>
 
       <div className="min-h-screen relative">
@@ -25,11 +25,11 @@ const MilkyMushroom = () => {
               <div className="max-w-6xl mx-auto">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                   <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8 text-center">
-                    <div className="text-8xl mb-4">🍄</div>
                     <img 
-                      src="/lovable-uploads/b7bc371a-d21e-40ff-9775-454fc954a8cf.png" 
+                      src="/lovable-uploads/695f036f-896b-4ec0-baf2-a73dd765ce89.png" 
                       alt="Fresh organic Milky Mushrooms from EarthCap - premium quality white mushrooms"
                       className="w-full h-64 object-contain rounded-lg"
+                      loading="lazy"
                     />
                   </div>
                   
@@ -63,19 +63,21 @@ const MilkyMushroom = () => {
                     </p>
                     
                     <div className="text-3xl font-bold text-primary mb-6">
-                      ₹180/kg
+                      ₹300/kg
                       <span className="text-sm font-normal text-muted-foreground ml-2">
                         Free delivery on orders over ₹500
                       </span>
                     </div>
                     
                     <div className="flex gap-4 mb-6">
-                      <Button size="lg" className="flex-1">
-                        <ShoppingCart className="w-5 h-5 mr-2" />
-                        Add to Cart
+                      <Button size="lg" className="flex-1" asChild>
+                        <a href="/checkout?product=milky">
+                          <ShoppingCart className="w-5 h-5 mr-2" />
+                          Add to Cart
+                        </a>
                       </Button>
-                      <Button variant="outline" size="lg">
-                        Buy Now
+                      <Button variant="outline" size="lg" asChild>
+                        <a href="/checkout?product=milky">Buy Now</a>
                       </Button>
                     </div>
                     

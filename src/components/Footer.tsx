@@ -11,7 +11,7 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Instagram, href: "https://www.instagram.com/earthcap.in/", label: "Instagram" },
     { icon: Facebook, href: "#", label: "Facebook" },
     { icon: Twitter, href: "#", label: "Twitter" }
   ];
@@ -46,34 +46,31 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-accent" />
-                <span className="text-sm">Organic Farm, Green Valley, Karnataka</span>
+                <span className="text-sm">katravulaplli,andhrapradesh-533437</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-accent" />
-                <span className="text-sm">+91 98765 43210</span>
+                <span className="text-sm">+91 94945 25944</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-accent" />
-                <span className="text-sm">hello@earthcap.in</span>
+                <span className="text-sm">mushrooms@earthcap.in</span>
               </div>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Map */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
-            <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
-                    className="text-primary-foreground/80 hover:text-accent transition-smooth text-sm"
-                  >
-                    {link.name}
-                  </button>
-                </li>
-              ))}
-            </ul>
+            <h4 className="text-lg font-semibold mb-6">Find Us</h4>
+            <div className="aspect-video rounded-xl overflow-hidden shadow-soft border border-primary-foreground/20">
+              <iframe
+                title="EarthCap location on Google Maps"
+                src="https://www.google.com/maps?q=katravulaplli%2Candhrapradesh-533437&hl=en&z=14&output=embed"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full"
+              ></iframe>
+            </div>
           </div>
 
           {/* Connect */}
@@ -97,32 +94,14 @@ const Footer = () => {
             <Button 
               variant="outline" 
               className="w-full border-accent text-accent hover:bg-accent hover:text-forest-dark"
-              onClick={() => window.open("https://wa.me/919876543210", "_blank")}
+              onClick={() => window.open("https://wa.me/919494525944", "_blank")}
             >
               WhatsApp Us
             </Button>
           </div>
         </div>
 
-        {/* Newsletter */}
-        <div className="mt-12 pt-8 border-t border-primary-foreground/20">
-          <div className="bg-primary-foreground/5 rounded-2xl p-8 text-center">
-            <h4 className="text-xl font-semibold mb-2">Stay Fresh with EarthCap</h4>
-            <p className="text-primary-foreground/80 mb-6">
-              Get updates on fresh harvests, special offers, and mushroom care tips!
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="flex-1 px-4 py-3 rounded-lg bg-background text-foreground border-0 focus:ring-2 focus:ring-accent"
-              />
-              <Button variant="hero" className="px-6">
-                Subscribe
-              </Button>
-            </div>
-          </div>
-        </div>
+        {/* Newsletter - removed per request */}
       </div>
 
       {/* Bottom Bar */}
@@ -130,7 +109,7 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-primary-foreground/70 text-sm">
-              © 2024 EarthCap Mushrooms. All rights reserved.
+              © 2025 EarthCap Mushrooms. All rights reserved.
             </p>
             <div className="flex items-center space-x-1 text-primary-foreground/70 text-sm mt-2 md:mt-0">
               <span>Made with</span>
