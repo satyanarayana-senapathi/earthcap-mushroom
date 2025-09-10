@@ -34,8 +34,8 @@ const Navigation = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-card"
-          : "bg-transparent"
+          ? "bg-forest-dark/95 backdrop-blur-md shadow-card"
+          : "bg-forest-dark/80"
       }`}
     >
       <div className="container mx-auto px-4 py-4">
@@ -48,8 +48,8 @@ const Navigation = () => {
               className="h-12 w-12 rounded-full"
             />
             <div>
-              <h1 className="text-xl font-bold text-primary">EarthCap</h1>
-              <p className="text-sm text-muted-foreground">Fresh Mushrooms</p>
+              <h1 className="text-xl font-bold text-white">EarthCap</h1>
+              <p className="text-sm text-golden-bright">Fresh Mushrooms</p>
             </div>
           </div>
 
@@ -59,9 +59,10 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-primary transition-smooth font-medium"
+                className="relative text-white hover:text-golden-bright transition-smooth font-medium px-3 py-2 rounded-md hover:bg-white/10 group"
               >
                 {item.name}
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-golden-bright transform -translate-x-1/2 transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
             <Button variant="primary" size="sm">
@@ -71,7 +72,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 text-white hover:text-golden-bright transition-smooth"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -87,13 +88,13 @@ const Navigation = () => {
           <div className="md:hidden mt-4 py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-left text-foreground hover:text-primary transition-smooth font-medium"
-                >
-                  {item.name}
-                </button>
+              <button
+                key={item.name}
+                onClick={() => scrollToSection(item.href)}
+                className="text-left text-white hover:text-golden-bright transition-smooth font-medium px-3 py-2 rounded-md hover:bg-white/10"
+              >
+                {item.name}
+              </button>
               ))}
               <Button variant="primary" size="sm" className="self-start">
                 Shop Now
