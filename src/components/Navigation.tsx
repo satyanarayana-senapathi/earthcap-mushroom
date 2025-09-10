@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,13 +16,11 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Products", href: "#products" },
-    { name: "Process", href: "#process" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Reviews", href: "#testimonials" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/", type: "link" },
+    { name: "About", href: "/about", type: "link" },
+    { name: "Products", href: "/products", type: "link" },
+    { name: "Reviews", href: "#testimonials", type: "scroll" },
+    { name: "Contact", href: "/contact", type: "link" },
   ];
 
   const scrollToSection = (href: string) => {
@@ -56,17 +55,28 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="relative text-white hover:text-golden-bright transition-smooth font-medium px-3 py-2 rounded-md hover:bg-white/10 group"
-              >
-                {item.name}
-                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-golden-bright transform -translate-x-1/2 transition-all duration-300 group-hover:w-full"></span>
-              </button>
+              item.type === "link" ? (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="relative text-white hover:text-golden-bright transition-smooth font-medium px-3 py-2 rounded-md hover:bg-white/10 group"
+                >
+                  {item.name}
+                  <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-golden-bright transform -translate-x-1/2 transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              ) : (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.href)}
+                  className="relative text-white hover:text-golden-bright transition-smooth font-medium px-3 py-2 rounded-md hover:bg-white/10 group"
+                >
+                  {item.name}
+                  <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-golden-bright transform -translate-x-1/2 transition-all duration-300 group-hover:w-full"></span>
+                </button>
+              )
             ))}
-            <Button variant="primary" size="sm">
-              Shop Now
+            <Button variant="primary" size="sm" asChild>
+              <Link to="/products">Shop Now</Link>
             </Button>
           </div>
 
@@ -88,16 +98,27 @@ const Navigation = () => {
           <div className="md:hidden mt-4 py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="text-left text-white hover:text-golden-bright transition-smooth font-medium px-3 py-2 rounded-md hover:bg-white/10"
-              >
-                {item.name}
-              </button>
+                item.type === "link" ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-left text-white hover:text-golden-bright transition-smooth font-medium px-3 py-2 rounded-md hover:bg-white/10"
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <button
+                    key={item.name}
+                    onClick={() => scrollToSection(item.href)}
+                    className="text-left text-white hover:text-golden-bright transition-smooth font-medium px-3 py-2 rounded-md hover:bg-white/10"
+                  >
+                    {item.name}
+                  </button>
+                )
               ))}
-              <Button variant="primary" size="sm" className="self-start">
-                Shop Now
+              <Button variant="primary" size="sm" className="self-start" asChild>
+                <Link to="/products">Shop Now</Link>
               </Button>
             </div>
           </div>

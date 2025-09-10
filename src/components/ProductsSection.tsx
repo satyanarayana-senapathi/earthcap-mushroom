@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Star, ShoppingCart, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ProductsSection = () => {
   const products = [
@@ -94,19 +95,28 @@ const ProductsSection = () => {
                 </div>
 
                 {/* Price and CTA */}
-                <div className="flex items-center justify-between">
-                  <div>
-                    <span className="text-3xl font-bold text-accent">
-                      {product.price}
-                    </span>
-                    <span className="text-sm text-muted-foreground ml-2">
-                      {product.unit}
-                    </span>
+                <div className="flex flex-col gap-4">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <span className="text-3xl font-bold text-accent">
+                        {product.price}
+                      </span>
+                      <span className="text-sm text-muted-foreground ml-2">
+                        {product.unit}
+                      </span>
+                    </div>
                   </div>
-                  <Button variant="primary" className="px-6">
-                    <ShoppingCart className="h-4 w-4 mr-2" />
-                    Add to Cart
-                  </Button>
+                  <div className="flex gap-3">
+                    <Button variant="primary" className="flex-1">
+                      <ShoppingCart className="h-4 w-4 mr-2" />
+                      Add to Cart
+                    </Button>
+                    <Button variant="outline" className="flex-1" asChild>
+                      <Link to={product.id === 1 ? "/products/milky-mushroom" : "/products/button-mushroom"}>
+                        View Details
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -115,8 +125,10 @@ const ProductsSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="px-8">
-            View All Products
+          <Button variant="outline" size="lg" className="px-8" asChild>
+            <Link to="/products">
+              View All Products
+            </Link>
           </Button>
         </div>
       </div>

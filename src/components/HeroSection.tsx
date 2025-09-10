@@ -33,18 +33,18 @@ const HeroSection = () => {
 
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-            Fresh{" "}
+            EarthCap – Fresh Milky & Button{" "}
             <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
               Mushrooms
             </span>
             <br />
-            Grown with Love
+            Delivered with Care
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Premium Milky & Button mushrooms cultivated naturally on our
-            sustainable farm. Fresh, nutritious, and delivered to your doorstep.
+            Premium organic Milky Mushrooms and Button Mushrooms grown naturally without chemicals. 
+            Farm-to-table freshness with sustainable farming practices delivered to your doorstep.
           </p>
 
           {/* CTA Buttons */}
