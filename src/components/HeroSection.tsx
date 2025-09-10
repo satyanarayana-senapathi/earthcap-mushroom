@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const HeroSection = () => {
   const navigate = useNavigate();
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 md:pt-0">
       {/* Animated Background */}
       <div className="absolute inset-0 gradient-hero">
         <div className="absolute inset-0 bg-primary/10"></div>
