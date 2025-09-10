@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +60,12 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // EarthCap custom colors
+        'mushroom-brown': "hsl(var(--mushroom-brown))",
+        'cream': "hsl(var(--cream))",
+        'forest-dark': "hsl(var(--forest-dark))",
+        'sage-green': "hsl(var(--sage-green))",
+        'golden-bright': "hsl(var(--golden-bright))",
       },
       borderRadius: {
         lg: "var(--radius)",
